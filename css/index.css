@@ -1,0 +1,393 @@
+:root {
+    --blanco: #fff;
+    --negro: #111111;
+    --gris: #343A40;
+
+    --fuentePrincipal: 'Raleway', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+}
+
+
+h1, h2, h3{
+    font-weight: 900;
+    margin: 1rem 0 4rem 0;
+}
+
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+.btn{
+    color: var(--gris);
+    background-color: var(--blanco);
+    border: 1px solid var(--gris);
+    padding: .5rem 2rem;
+    transition: background-color .3s;
+}
+
+.btn:hover{
+    background-color: var(--grid);
+    border: 1px solid var(--blanco);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.mt-5{
+    margin-top: 5rem;
+}
+
+/* header*/  
+.header{
+    min-height: 60rem;
+    background-image: url(/img/casa1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    padding: 5rem 0;
+}
+
+@media (min-width: 768px) { 
+    .header{
+        padding: 2rem 0;
+    } 
+
+    .nombre-sitio{
+        font-size: 5rem;
+    }
+}
+
+
+.contenido-header{
+    display: flex;
+    flex-direction: column;
+    height: calc(60rem - 3rem);
+    justify-content: space-between;
+    color: var(--blanco);
+}
+
+
+@media (min-width: 768px) { 
+    .barra{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }   
+}
+
+.barra a{
+    color: var(--blanco);
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.barra .contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) { 
+    .contacto{
+
+        align-items: flex-end;
+    }
+}
+
+.telefono{
+    display: flex;
+    align-items: center;
+}
+
+.contacto .telefono::before{
+    content: '';
+    background-image: url(../img/telefono.png);
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: 1rem;
+}
+
+.nombre-sitio{
+    font-weight: 300;
+    font-size: 4rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) { 
+    .nombre-sitio{
+        font-size: 6rem;
+    } 
+}
+
+.nombre-sitio span{
+    font-weight: 900;
+}
+
+.slogan{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.slogan h2{
+    margin-bottom: 0;
+}
+
+.slogan p{
+    line-height: 0;
+}
+
+.navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.navegacion a:hover{
+    background-color: rgb(255 255 255 / .5);
+    transition: background-color .5s;
+    color: var(--negro);
+    font-weight: 500;
+}
+
+.navegacion a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: .5rem 1rem;
+}
+@media (min-width: 768px) { 
+    .navegacion a{
+ padding: 1rem 1rem;
+    } 
+}
+
+@media (min-width: 768px) { 
+     .navegacion{
+         flex-direction: row;
+     }
+}
+
+
+/* section sobre nosotros */
+
+.nosotros{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    background-image: url(../img/nosotros.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) { 
+    .nosotros{
+        grid-template-columns: repeat(3,1fr);
+    } 
+}
+
+.contenido-nosotros{
+  
+    background-color: var(--blanco);
+    padding: 0 5rem 5rem 5rem;
+}
+
+.contenido-nosotros p{
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) { 
+    .contenido-nosotros{
+        grid-column: 2/4;
+    } 
+}
+
+/* section principal */
+
+main h2{
+    margin-top: 6rem;
+    margin-bottom: 5rem
+}
+
+.modelo{
+
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    background-repeat: no-repeat;
+   margin-bottom: 5rem;
+}
+
+.modelo:last-of-type{
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) { 
+     .modelo{
+         grid-template-columns: repeat(2,1fr);
+         gap: 2rem;
+     }
+}
+
+.contenido-modelo{
+    padding: 5rem;
+    background-color: var(--blanco);
+}
+
+.basico{
+    background-image: url(../img/modelo_basico.jpg);
+}
+
+@media (min-width: 768px) { 
+    .basico{
+        background-position: top right;
+    }
+    .basico .contenido-modelo {
+        grid-row: 2/3;
+        padding: 2rem 2rem 2rem 0;
+    } 
+}
+
+.premier{
+    background-image: url(../img/modelo_premier.jpg);
+
+}
+
+@media (min-width: 768px) { 
+    .premier{
+        background-position: top left;
+    }
+    .premier .contenido-modelo{
+        grid-column: 2/3;
+        padding: 2rem;
+    } 
+}
+
+
+.elite{
+    background-image: url(../img/modelo_elite.jpg);
+}
+
+@media (min-width: 768px) { 
+    .elite{
+        background-position: top right;
+    } 
+
+    .elite .contenido-modelo{
+        grid-row: 1/2;
+        padding: 2rem;
+    }
+}
+
+/* section de galeria */
+
+
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.galeria img{
+    object-fit: cover;
+    height: 100%;
+}
+.galeria .imagen:nth-child(2){
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+.galeria .imagen:nth-child(3){
+    grid-column: 2/3;
+    grid-row: 3/5;
+    
+}
+.galeria .imagen:nth-child(6){
+    grid-row: 2/4;
+}
+
+@media (min-width: 768px) { 
+     .galeria{
+         grid-template-columns: repeat(3,1fr);
+     
+     }
+
+     .galeria .imagen:nth-child(2){
+         grid-row: 2/4;
+         grid-column: 1/2;
+     }
+
+     .galeria .imagen:nth-child(6){
+        grid-row: 1/3;
+        grid-column: 3/4;
+    }
+    .galeria .imagen:nth-child(3){
+        grid-row: 1/2;
+    }
+}
+
+.footer{
+    background-image: url(../img/footer_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 50rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.footer .barra{
+    align-items: flex-end;
+}
+
+.copyright{
+    color: var(--blanco);
+    font-size: 2rem;
+    background-color: var(--negro);
+    margin: 0;
+    padding: 1rem;
+    margin-top: 4rem;
+}
+
+.footer .nombre-sitio{
+    color: var(--blanco);
+    padding-top: 20rem;
+}
